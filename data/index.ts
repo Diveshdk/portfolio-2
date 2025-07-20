@@ -74,12 +74,11 @@ export const gridItems = [
 export const projects = [
         {
     id: 1,
-    projectName: "SplitChain",
-    hackathonName: "ICP Crewhouz 2025 - Winner🏆",
-    description: "The first decentralized payment splitting platform on Internet Computer. Pay friends, merchants, and manage group expenses with real crypto conversions.",
-    image: "/splitchain.png",
-    techStack: ["ICP", "Typescript", "React"],
-    projectLink: "https://v0-splitchainpay1.vercel.app/"
+    title: "SplitChain - ICP Crewhouz 2025 - Winner🏆",
+    des: "The first decentralized payment splitting platform on Internet Computer. Pay friends, merchants, and manage group expenses with real crypto conversions.",
+    img: "/splitchain.png",
+    iconLists: ["/next.svg", "/eth.svg", "/web3.svg", "/ts.svg"],
+    link: "https://v0-splitchainpay1.vercel.app/"
   }, 
   {
     id: 1,
@@ -91,12 +90,11 @@ export const projects = [
   },
   {
     id: 3,
-    projectName: "VoteChain",
-    hackathonName: "CodeShastra XI",
-    description: "Revolutionizing Voting with Privacy, Security & Trust. Empowering users with secure, anonymous, and gamified voting — backed by blockchain.",
-    image: "/votechain.png",
-    techStack: ["Ethereum", "NextJs", "GeoLocation", "Gemini"],
-    projectLink: "https://teambrocode-votechain.vercel.app/"
+    title: "VoteChain",
+    des: "Revolutionizing Voting with Privacy, Security & Trust. Empowering users with secure, anonymous, and gamified voting — backed by blockchain.",
+    img: "/votechain.png",
+    iconLists: ["/next.svg", "/eth.svg", "/web3.svg", "/ts.svg"],
+    link: "https://teambrocode-votechain.vercel.app/"
   },
   {
     id: 2,
