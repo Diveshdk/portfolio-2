@@ -72,6 +72,15 @@ export const gridItems = [
 ];
 
 export const projects = [
+        {
+    id: 1,
+    projectName: "SplitChain",
+    hackathonName: "ICP Crewhouz 2025 - Winner🏆",
+    description: "The first decentralized payment splitting platform on Internet Computer. Pay friends, merchants, and manage group expenses with real crypto conversions.",
+    image: "/splitchain.png",
+    techStack: ["ICP", "Typescript", "React"],
+    projectLink: "https://v0-splitchainpay1.vercel.app/"
+  }, 
   {
     id: 1,
     title: "Secret Manager - ETHIndia 2024",
@@ -79,6 +88,15 @@ export const projects = [
     img: "/Ethindia.jpeg",
     iconLists: ["/next.svg", "/eth.svg", "/web3.svg", "/ts.svg"],
     link: "https://devfolio.co/projects/secret-manager-1db7",
+  },
+  {
+    id: 3,
+    projectName: "VoteChain",
+    hackathonName: "CodeShastra XI",
+    description: "Revolutionizing Voting with Privacy, Security & Trust. Empowering users with secure, anonymous, and gamified voting — backed by blockchain.",
+    image: "/votechain.png",
+    techStack: ["Ethereum", "NextJs", "GeoLocation", "Gemini"],
+    projectLink: "https://teambrocode-votechain.vercel.app/"
   },
   {
     id: 2,
@@ -222,7 +240,16 @@ export const socialMedia = [
 ];
 
 export const hackathons = [
-  {
+      {
+    id: 1,
+    projectName: "SplitChain",
+    hackathonName: "ICP Crewhouz 2025 - Winner🏆",
+    description: "The first decentralized payment splitting platform on Internet Computer. Pay friends, merchants, and manage group expenses with real crypto conversions.",
+    image: "/splitchain.png",
+    techStack: ["ICP", "Typescript", "React"],
+    projectLink: "https://v0-splitchainpay1.vercel.app/"
+  },{
+    
     id: 2,
     projectName: "Secret Manager",
     hackathonName: "ETHIndia 2024",
@@ -230,6 +257,14 @@ export const hackathons = [
     image: "/Ethindia.jpeg",
     techStack: ["Encryption", "NextJS", "Ethereum", "Web3.js"],
     projectLink: "https://devfolio.co/projects/secret-manager-1db7"
+  },    {
+    id: 3,
+    projectName: "VoteChain",
+    hackathonName: "CodeShastra XI",
+    description: "Revolutionizing Voting with Privacy, Security & Trust. Empowering users with secure, anonymous, and gamified voting — backed by blockchain.",
+    image: "/votechain.png",
+    techStack: ["Ethereum", "NextJs", "GeoLocation", "Gemini"],
+    projectLink: "https://teambrocode-votechain.vercel.app/"
   },
   {
     id: 4,
@@ -258,22 +293,6 @@ export const hackathons = [
     techStack: ["Cloudinary", "Typescript", "Razorpay", "Nextjs"],
     projectLink: "https://github.com/yourusername/ar-education"
   },
-    {
-    id: 3,
-    projectName: "VoteChain",
-    hackathonName: "CodeShastra XI",
-    description: "Revolutionizing Voting with Privacy, Security & Trust. Empowering users with secure, anonymous, and gamified voting — backed by blockchain.",
-    image: "/votechain.png",
-    techStack: ["Ethereum", "NextJs", "GeoLocation", "Gemini"],
-    projectLink: "https://teambrocode-votechain.vercel.app/"
-  },
-    {
-    id: 1,
-    projectName: "SplitChain",
-    hackathonName: "ICP Crewhouz 2025 - Winner🏆",
-    description: "The first decentralized payment splitting platform on Internet Computer. Pay friends, merchants, and manage group expenses with real crypto conversions.",
-    image: "/splitchain.png",
-    techStack: ["ICP", "Typescript", "React"],
-    projectLink: "https://v0-splitchainpay1.vercel.app/"
-  }
+
+
 ];
