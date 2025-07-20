@@ -223,7 +223,7 @@ export const socialMedia = [
 
 export const hackathons = [
   {
-    id: 1,
+    id: 2,
     projectName: "Secret Manager",
     hackathonName: "ETHIndia 2024",
     description: "Web3-based platform for secure data management and transactions with AI integration. Built for enhanced security and operational efficiency.",
@@ -232,7 +232,7 @@ export const hackathons = [
     projectLink: "https://devfolio.co/projects/secret-manager-1db7"
   },
   {
-    id: 2,
+    id: 4,
     projectName: "Decentralized Ticketing System",
     hackathonName: "Unfold Hackathon 2024, Bangalore",
     description: "Revolutionize event ticketing with secure, blockchain-based identity verification and transparent ticketing. Empower organizers with efficient management tools, while offering a personalized and globally accessible experience for users.",
@@ -241,7 +241,7 @@ export const hackathons = [
     projectLink: "https://github.com/Bhavesh-0909/unfold"
   },
   {
-    id: 3,
+    id: 5,
     projectName: "Rasoi-Saathi - Food Donation Tracker and Recipie Suggestion Platform",
     hackathonName: "Technovate 2.0, SPIT Andheri",
     description: "Reduces food waste for individuals and businesses.Supports local communities by connecting surplus food to shelters.Improves food management through expiry tracking and meal suggestions.Contributes to environmental sustainability by lowering carbon footprint.Raises awareness and educates users on sustainable food practices.",
@@ -250,7 +250,7 @@ export const hackathons = [
     projectLink: "https://devfolio.co/projects/rasoi-saathi-a0d9"
   },
   {
-    id: 4,
+    id: 6,
     projectName: "PixelForge - AI Image Generator and Manipulator",
     hackathonName: "Codelite 2024",
     description: "Visual media editing is often time-consuming, complex, and costly, with users struggling to manage multiple tools for tasks like background removal and object editing. High-quality solutions are either too complex or locked behind expensive paywalls, limiting accessibility for everyday users and small businesses.",
@@ -259,21 +259,21 @@ export const hackathons = [
     projectLink: "https://github.com/yourusername/ar-education"
   },
     {
-    id: 5,
+    id: 3,
     projectName: "VoteChain",
     hackathonName: "CodeShastra XI",
-    description: "Visual media editing is often time-consuming, complex, and costly, with users struggling to manage multiple tools for tasks like background removal and object editing. High-quality solutions are either too complex or locked behind expensive paywalls, limiting accessibility for everyday users and small businesses.",
+    description: "Revolutionizing Voting with Privacy, Security & Trust. Empowering users with secure, anonymous, and gamified voting — backed by blockchain.",
     image: "/votechain.png",
-    techStack: ["Cloudinary", "Typescript", "Razorpay", "Nextjs"],
-    projectLink: "https://github.com/yourusername/ar-education"
+    techStack: ["Ethereum", "NextJs", "GeoLocation", "Gemini"],
+    projectLink: "https://teambrocode-votechain.vercel.app/"
   },
     {
-    id: 6,
+    id: 1,
     projectName: "SplitChain",
-    hackathonName: "ICP Crewhouz 2025",
-    description: "Visual media editing is often time-consuming, complex, and costly, with users struggling to manage multiple tools for tasks like background removal and object editing. High-quality solutions are either too complex or locked behind expensive paywalls, limiting accessibility for everyday users and small businesses.",
+    hackathonName: "ICP Crewhouz 2025 - Winner🏆",
+    description: "The first decentralized payment splitting platform on Internet Computer. Pay friends, merchants, and manage group expenses with real crypto conversions.",
     image: "/splitchain.png",
-    techStack: ["Cloudinary", "Typescript", "Razorpay", "Nextjs"],
-    projectLink: "https://github.com/yourusername/ar-education"
+    techStack: ["ICP", "Typescript", "React"],
+    projectLink: "https://v0-splitchainpay1.vercel.app/"
   }
 ];
