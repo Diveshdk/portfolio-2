@@ -257,5 +257,23 @@ export const hackathons = [
     image: "/pixelforge.jpeg",
     techStack: ["Cloudinary", "Typescript", "Razorpay", "Nextjs"],
     projectLink: "https://github.com/yourusername/ar-education"
+  },
+    {
+    id: 5,
+    projectName: "VoteChain",
+    hackathonName: "CodeShastra XI",
+    description: "Visual media editing is often time-consuming, complex, and costly, with users struggling to manage multiple tools for tasks like background removal and object editing. High-quality solutions are either too complex or locked behind expensive paywalls, limiting accessibility for everyday users and small businesses.",
+    image: "/pixelforge.jpeg",
+    techStack: ["Cloudinary", "Typescript", "Razorpay", "Nextjs"],
+    projectLink: "https://github.com/yourusername/ar-education"
+  },
+    {
+    id: 6,
+    projectName: "SplitChain",
+    hackathonName: "ICP Crewhouz 2025",
+    description: "Visual media editing is often time-consuming, complex, and costly, with users struggling to manage multiple tools for tasks like background removal and object editing. High-quality solutions are either too complex or locked behind expensive paywalls, limiting accessibility for everyday users and small businesses.",
+    image: "/pixelforge.jpeg",
+    techStack: ["Cloudinary", "Typescript", "Razorpay", "Nextjs"],
+    projectLink: "https://github.com/yourusername/ar-education"
   }
 ];
