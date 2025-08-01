@@ -120,7 +120,7 @@ const Hero = () => {
             </button>
           </Link>
           <a 
-            href="https://drive.google.com/file/d/1Xi1bE9JqCtv_wDvMTt1g7TnQz19FlYTv/view?usp=sharing"
+            href="https://drive.google.com/file/d/15J34fGO_2giRHq7PhG2JA7P61GJ8xDkl/view?usp=drive_link"
             target="_blank"
             className="group w-full sm:w-auto"
           >
