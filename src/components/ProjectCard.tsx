@@ -29,6 +29,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, theme 
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
+      whileHover={{ y: -8, scale: 1.02 }}
+      whileTap={{ scale: 0.98, borderColor: '#FF4D00' }}
       transition={{ 
         delay: index * 0.1, 
         duration: 0.8, 

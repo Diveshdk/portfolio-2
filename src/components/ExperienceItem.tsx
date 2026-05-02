@@ -29,6 +29,8 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({ role, company, p
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "circOut" }}
+          whileHover={{ y: -5, scale: 1.01 }}
+          whileTap={{ scale: 0.98 }}
           className="bg-white border-2 border-deep-black p-6 md:p-8 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 transition-all duration-300 relative group/card"
         >
           {/* Tag */}

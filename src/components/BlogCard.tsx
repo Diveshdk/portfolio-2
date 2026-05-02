@@ -19,6 +19,8 @@ export const BlogCard: React.FC<BlogCardProps> = ({ id, title, date, excerpt, ty
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay }}
+    whileHover={{ border: '1px solid #FF4D00' }}
+    whileTap={{ scale: 0.98, borderColor: '#FF4D00' }}
     className="group bg-white/5 border border-white/10 flex flex-col overflow-hidden hover:border-neon-orange transition-all duration-300 relative"
   >
     <Link to={`/blogs/${id}`} className="absolute inset-0 z-20" data-hover="true" />
