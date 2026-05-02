@@ -93,7 +93,7 @@ export const ProjectDetail: React.FC = () => {
             <div className="lg:col-span-8 space-y-12">
               <div className="space-y-8">
                 <h2 className="font-display text-2xl md:text-3xl uppercase font-black leading-none italic text-deep-black">The Mission</h2>
-                <p className="text-xl md:text-2xl font-bold tracking-tight uppercase leading-none text-deep-black/90">
+                <p className="text-base md:text-lg font-medium leading-relaxed text-deep-black/70">
                   {project.fullDescription || project.description}
                 </p>
               </div>

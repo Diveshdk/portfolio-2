@@ -58,6 +58,7 @@ export const Competitions: React.FC = () => {
                   damping: 15
                 }}
                 whileHover={{ backgroundColor: '#0A0A0A', color: '#FFFFFF', zIndex: 10, scale: 1.05 }}
+                whileTap={{ scale: 0.95, backgroundColor: '#0A0A0A', color: '#FFFFFF' }}
                 className="p-12 flex flex-col items-center justify-center bg-white border border-transparent transition-all duration-300 relative group"
                 data-hover="true"
               >

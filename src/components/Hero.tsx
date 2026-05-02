@@ -344,26 +344,32 @@ export const Hero = () => {
         className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center relative z-20 w-full px-6"
       >
         <MagneticElement className="w-full sm:w-auto">
-          <Link 
-            to="/projects"
-            className="group relative overflow-hidden px-8 md:px-10 py-4 md:py-5 bg-white text-deep-black font-display font-black uppercase tracking-widest text-xs md:text-sm hover:text-white transition-colors duration-500 w-full flex items-center justify-center gap-3 transition-transform active:scale-95"
-            data-hover="true"
+          <motion.div
+            whileTap={{ scale: 0.95 }}
+            className="w-full"
           >
-            <div className="absolute inset-0 bg-neon-orange translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
-            <span className="relative z-10">Explore Projects</span>
-            <Code2 size={18} className="relative z-10" />
-          </Link>
+            <Link 
+              to="/projects"
+              className="group relative overflow-hidden px-8 md:px-10 py-4 md:py-5 bg-white text-deep-black font-display font-black uppercase tracking-widest text-xs md:text-sm hover:text-white transition-colors duration-500 w-full flex items-center justify-center gap-3 transition-transform"
+              data-hover="true"
+            >
+              <div className="absolute inset-0 bg-neon-orange translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+              <span className="relative z-10">Explore Projects</span>
+              <Code2 size={18} className="relative z-10" />
+            </Link>
+          </motion.div>
         </MagneticElement>
 
         <MagneticElement className="w-full sm:w-auto">
-          <button 
-            className="group relative px-8 md:px-10 py-4 md:py-5 border border-white/20 text-white font-display font-black uppercase tracking-widest text-xs md:text-sm hover:border-white transition-all flex items-center justify-center gap-3 overflow-hidden w-full transition-transform active:scale-95"
+          <motion.button 
+            whileTap={{ scale: 0.95 }}
+            className="group relative px-8 md:px-10 py-4 md:py-5 border border-white/20 text-white font-display font-black uppercase tracking-widest text-xs md:text-sm hover:border-white transition-all flex items-center justify-center gap-3 overflow-hidden w-full transition-transform"
             data-hover="true"
           >
             <div className="absolute bottom-0 left-0 w-full h-[2px] bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
             <span className="relative z-10">Fetch Resume</span>
             <Download size={16} className="relative z-10 group-hover:translate-y-1 transition-transform" />
-          </button>
+          </motion.button>
         </MagneticElement>
       </motion.div>
 
