@@ -23,7 +23,6 @@ export const BrutalistCard = ({
   return (
     <motion.div
       whileHover={{ y: -8, scale: 1.02 }}
-      whileTap={{ scale: 0.98, y: 0 }}
       transition={{ type: 'spring', stiffness: 400, damping: 25 }}
       className={cn(
         "group relative bg-white/5 border border-white/10 p-1",

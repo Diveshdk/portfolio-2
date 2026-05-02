@@ -22,14 +22,6 @@
       cursor: none !important;
     }
   }
-
-  * {
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  [data-hover="true"], button, a, .group {
-    touch-action: manipulation;
-  }
 }
 
 .lenis.lenis-smooth {
