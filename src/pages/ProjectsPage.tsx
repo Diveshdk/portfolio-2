@@ -33,7 +33,7 @@ export const ProjectsPage: React.FC = () => {
         <div className="space-y-12">
           <div className="space-y-6">
             <span className="font-mono text-xs uppercase tracking-[0.4em] text-neon-orange font-bold italic">03 / My Works</span>
-            <h1 className="font-display text-7xl md:text-[12rem] font-black uppercase tracking-tighter leading-[0.8]">
+            <h1 className="font-display text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8]">
               Recent <br /> <span className="italic text-transparent outline-text">Projects.</span>
             </h1>
           </div>

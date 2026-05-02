@@ -79,9 +79,9 @@ export const ProjectDetail: React.FC = () => {
                      ))}
                    </div>
                 </div>
-                <h1 className="font-display text-7xl md:text-[10rem] font-black uppercase tracking-tighter leading-[0.8] text-white">
+                <h2 className="font-display text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8] text-white">
                   {project.title}
-                </h1>
+                </h2>
               </motion.div>
             </div>
           </div>
@@ -92,8 +92,8 @@ export const ProjectDetail: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-8 space-y-12">
               <div className="space-y-8">
-                <h2 className="font-display text-4xl uppercase font-black leading-none italic text-deep-black">The Mission</h2>
-                <p className="text-xl md:text-2xl font-medium leading-relaxed text-deep-black/70">
+                <h2 className="font-display text-2xl md:text-3xl uppercase font-black leading-none italic text-deep-black">The Mission</h2>
+                <p className="text-xl md:text-2xl font-bold tracking-tight uppercase leading-none text-deep-black/90">
                   {project.fullDescription || project.description}
                 </p>
               </div>
@@ -104,7 +104,7 @@ export const ProjectDetail: React.FC = () => {
                   {project.stats.map((stat) => (
                     <div key={stat.label} className="space-y-2">
                        <span className="font-mono text-[10px] uppercase tracking-widest text-deep-black/30 font-bold">{stat.label}</span>
-                       <p className="font-display text-4xl font-black italic text-deep-black">{stat.value}</p>
+                       <p className="font-display text-3xl font-black italic text-deep-black">{stat.value}</p>
                     </div>
                   ))}
                 </div>

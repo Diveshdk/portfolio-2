@@ -21,7 +21,7 @@ export const CompetitionsPage: React.FC = () => {
       <Section id="competitions-hero" backgroundColor="bg-white" textColor="text-deep-black" className="pt-48 pb-24">
         <div className="space-y-6">
           <span className="font-mono text-xs uppercase tracking-[0.4em] text-deep-black/40 font-bold italic">04 / Performance Data</span>
-          <h1 className="font-display text-7xl md:text-[12rem] font-black uppercase tracking-tighter leading-[0.8] mix-blend-multiply">
+          <h1 className="font-display text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8] mix-blend-multiply">
             Competitions <br /> <span className="italic text-neon-orange">Hackathons.</span>
           </h1>
         </div>
@@ -47,13 +47,13 @@ export const CompetitionsPage: React.FC = () => {
                 <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-24">
                   <span className="font-mono text-xs opacity-30 font-bold">{award.year}</span>
                   <div className="space-y-1">
-                     <h2 className="font-display text-4xl md:text-6xl font-black uppercase tracking-tighter group-hover:italic transition-all">{award.name}</h2>
+                     <h2 className="font-display text-3xl md:text-5xl font-black uppercase tracking-tighter group-hover:italic transition-all">{award.name}</h2>
                      <span className="font-mono text-[10px] uppercase tracking-[0.5em] opacity-40">{award.category}</span>
                   </div>
                 </div>
                 
                 <div className="mt-6 md:mt-0 flex flex-col md:items-end">
-                  <span className="font-display text-2xl md:text-3xl font-bold uppercase text-neon-orange group-hover:text-white transition-colors underline underline-offset-4 decoration-2">{award.rank}</span>
+                  <span className="font-display text-xl md:text-2xl font-bold uppercase text-neon-orange group-hover:text-white transition-colors underline underline-offset-4 decoration-2">{award.rank}</span>
                 </div>
               </motion.div>
             ))

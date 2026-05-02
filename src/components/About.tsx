@@ -18,16 +18,16 @@ export const About: React.FC = () => {
               <span className="w-12 h-[1px] bg-neon-orange/30"></span>
               01 / About Me
             </motion.span>
-            <h2 className="font-display text-7xl md:text-[9rem] lg:text-[10rem] font-black uppercase tracking-tighter leading-[0.8] text-deep-black">
+            <h2 className="font-display text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8] text-deep-black">
               About Me
             </h2>
           </div>
           
           <div className="max-w-2xl space-y-8">
-            <p className="text-2xl md:text-3xl font-bold tracking-tight uppercase leading-none text-deep-black/90">
+            <p className="text-xl md:text-2xl font-bold tracking-tight uppercase leading-none text-deep-black/90">
               If Engineering is a <span className="italic underline decoration-neon-orange decoration-[4px] underline-offset-8">Magic</span>, I am a <span className="italic underline decoration-neon-orange decoration-[4px] underline-offset-8">Magician.</span>
             </p>
-            <div className="text-lg md:text-xl font-medium leading-relaxed text-deep-black/50 space-y-6">
+            <div className="text-base md:text-lg font-medium leading-relaxed text-deep-black/50 space-y-6">
               <p>I’m Divesh Kankani, a Computer Science & Engineering graduate (2026) specializing in IoT, Cybersecurity, and Blockchain.</p>
               <p>I have 2+ years of experience in blockchain, worked as freelancer and done internship at IMD, Mumbai—I’ve built systems for real-world use.</p>
               <p>I think in systems and build secure, reliable solutions that scale. I focus on understanding problems deeply and turning them into meaningful products.</p>
@@ -78,11 +78,11 @@ export const About: React.FC = () => {
           <div className="grid grid-cols-1 gap-4">
             <div className="p-6 border border-deep-black flex flex-col justify-between hover:bg-neon-orange hover:text-white transition-colors group">
               <span className="font-mono text-[9px] uppercase opacity-40">Leetcode Competitive</span>
-              <span className="font-display text-4xl md:text-5xl font-black italic">top 2.48%</span>
+              <span className="font-display text-3xl md:text-4xl font-black italic">top 2.48%</span>
             </div>
             <div className="p-6 border border-deep-black flex flex-col justify-between hover:bg-electric-blue hover:text-white transition-colors">
               <span className="font-mono text-[9px] uppercase opacity-40">Projects Done</span>
-              <span className="font-display text-4xl md:text-5xl font-black italic">20+</span>
+              <span className="font-display text-3xl md:text-4xl font-black italic">20+</span>
             </div>
           </div>
         </div>

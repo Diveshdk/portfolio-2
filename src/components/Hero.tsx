@@ -156,7 +156,7 @@ const IdentityAssembly = ({
       {/* First Name - Italic */}
       <motion.div 
         style={{ letterSpacing: tracking }}
-        className="flex text-5xl sm:text-7xl md:text-8xl lg:text-[12rem] leading-[0.8] uppercase tracking-tighter text-white"
+        className="flex text-4xl sm:text-6xl md:text-7xl lg:text-[10rem] leading-[0.8] uppercase tracking-tighter text-white"
       >
         {firstName.split("").map((c, i) => (
           <CharacterAssembly 
@@ -174,7 +174,7 @@ const IdentityAssembly = ({
       {/* Last Name - Bold/Accent */}
       <motion.div 
         style={{ letterSpacing: tracking }}
-        className="flex text-5xl sm:text-7xl md:text-8xl lg:text-[12rem] leading-[0.8] uppercase tracking-tighter text-neon-orange"
+        className="flex text-4xl sm:text-6xl md:text-7xl lg:text-[10rem] leading-[0.8] uppercase tracking-tighter text-neon-orange"
       >
         {lastName.split("").map((c, i) => (
           <CharacterAssembly 
