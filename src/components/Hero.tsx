@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'moti
 import { Download, Code2, Terminal } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '../lib/utils';
+import { resumeLink } from '../data';
 
 const MagneticElement = ({ children, className }: { children: React.ReactNode, className?: string }) => {
   const x = useMotionValue(0);
@@ -356,14 +357,17 @@ export const Hero = () => {
         </MagneticElement>
 
         <MagneticElement className="w-full sm:w-auto">
-          <button 
+          <a 
+            href={resumeLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative px-8 md:px-10 py-4 md:py-5 border border-white/20 text-white font-display font-black uppercase tracking-widest text-xs md:text-sm hover:border-white transition-all flex items-center justify-center gap-3 overflow-hidden w-full transition-transform active:scale-95"
             data-hover="true"
           >
             <div className="absolute bottom-0 left-0 w-full h-[2px] bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
             <span className="relative z-10">Fetch Resume</span>
             <Download size={16} className="relative z-10 group-hover:translate-y-1 transition-transform" />
-          </button>
+          </a>
         </MagneticElement>
       </motion.div>
 

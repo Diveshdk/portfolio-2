@@ -1,3 +1,5 @@
+export const resumeLink = "https://drive.google.com/file/d/1wByIUdYU6DgPNrht4Z18nf--Jc7yb26S/view?usp=drive_link";
+
 export interface Project {
   id: string;
   title: string;

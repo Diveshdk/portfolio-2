@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Github, Linkedin, Twitter, Send, Code2, Cpu, X, SquareTerminal } from 'lucide-react';
+import { Github, Linkedin, Twitter, Send, Code2, Cpu, X, SquareTerminal, FileText } from 'lucide-react';
+import { resumeLink } from '../data';
 import { cn } from '../lib/utils';
 
 const socialLinks = [
@@ -10,6 +11,7 @@ const socialLinks = [
   { name: 'Twitter', icon: Twitter, href: 'https://x.com/sastelog', color: 'hover:bg-sky-500 hover:text-white' },
   { name: 'Telegram', icon: Send, href: 'https://t.me/divesh_dk12', color: 'hover:bg-sky-400 hover:text-white' },
   { name: 'Devfolio', icon: Cpu, href: 'https://devfolio.co/@diveshdk07', color: 'hover:bg-indigo-600 hover:text-white' },
+  { name: 'Resume', icon: FileText, href: resumeLink, color: 'hover:bg-neon-orange hover:text-white' },
 ];
 
 export const ReachMeToggle = () => {
