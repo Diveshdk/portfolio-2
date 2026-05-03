@@ -15,7 +15,7 @@ export async function getProjects(): Promise<Project[]> {
     const { data, error } = await supabase
       .from('projects')
       .select('*')
-      .order('created_at', { ascending: false });
+      .order('order_index', { ascending: true });
 
     if (error) throw error;
     if (!data || data.length === 0) return staticProjects;
@@ -166,6 +166,7 @@ function mapProject(row: Record<string, unknown>): Project {
     isFeatured: row.is_featured as boolean | undefined,
     image: row.image as string | undefined,
     stats: (row.stats as { label: string; value: string }[]) || undefined,
+    orderIndex: row.order_index as number | undefined,
   };
 }
 
@@ -182,6 +183,7 @@ function mapProjectToDb(p: Partial<Project>): Record<string, unknown> {
   if (p.isFeatured !== undefined) obj.is_featured = p.isFeatured;
   if (p.image !== undefined) obj.image = p.image;
   if (p.stats !== undefined) obj.stats = p.stats;
+  if (p.orderIndex !== undefined) obj.order_index = p.orderIndex;
   return obj;
 }
 

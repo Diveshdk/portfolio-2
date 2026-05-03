@@ -10,6 +10,7 @@ export interface Project {
   isFeatured?: boolean;
   image?: string;
   stats?: { label: string; value: string }[];
+  orderIndex?: number;
 }
 
 export interface Award {

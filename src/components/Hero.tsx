@@ -10,7 +10,8 @@ const MagneticElement = ({ children, className }: { children: React.ReactNode, c
   const springX = useSpring(x, { stiffness: 150, damping: 15 });
   const springY = useSpring(y, { stiffness: 150, damping: 15 });
 
-  const handleMove = (clientX: number, clientY: number, currentTarget: HTMLElement) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { clientX, clientY, currentTarget } = e;
     const { left, top, width, height } = currentTarget.getBoundingClientRect();
     const centerX = left + width / 2;
     const centerY = top + height / 2;
@@ -18,17 +19,7 @@ const MagneticElement = ({ children, className }: { children: React.ReactNode, c
     y.set(clientY - centerY);
   };
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    handleMove(e.clientX, e.clientY, e.currentTarget);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (e.touches[0]) {
-      handleMove(e.touches[0].clientX, e.touches[0].clientY, e.currentTarget);
-    }
-  };
-
-  const handleLeave = () => {
+  const handleMouseLeave = () => {
     x.set(0);
     y.set(0);
   };
@@ -36,9 +27,7 @@ const MagneticElement = ({ children, className }: { children: React.ReactNode, c
   return (
     <motion.div
       onMouseMove={handleMouseMove}
-      onTouchMove={handleTouchMove}
-      onMouseLeave={handleLeave}
-      onTouchEnd={handleLeave}
+      onMouseLeave={handleMouseLeave}
       style={{ x: springX, y: springY }}
       className={cn("relative z-20", className)}
     >
@@ -355,29 +344,26 @@ export const Hero = () => {
         className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center relative z-20 w-full px-6"
       >
         <MagneticElement className="w-full sm:w-auto">
-          <motion.div whileTap={{ scale: 0.95 }} className="w-full">
-            <Link 
-              to="/projects"
-              className="group relative overflow-hidden px-8 md:px-10 py-4 md:py-5 bg-white text-deep-black font-display font-black uppercase tracking-widest text-xs md:text-sm hover:text-white transition-colors duration-500 w-full flex items-center justify-center gap-3 transition-transform"
-              data-hover="true"
-            >
-              <div className="absolute inset-0 bg-neon-orange translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
-              <span className="relative z-10">Explore Projects</span>
-              <Code2 size={18} className="relative z-10" />
-            </Link>
-          </motion.div>
+          <Link 
+            to="/projects"
+            className="group relative overflow-hidden px-8 md:px-10 py-4 md:py-5 bg-white text-deep-black font-display font-black uppercase tracking-widest text-xs md:text-sm hover:text-white transition-colors duration-500 w-full flex items-center justify-center gap-3 transition-transform active:scale-95"
+            data-hover="true"
+          >
+            <div className="absolute inset-0 bg-neon-orange translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+            <span className="relative z-10">Explore Projects</span>
+            <Code2 size={18} className="relative z-10" />
+          </Link>
         </MagneticElement>
 
         <MagneticElement className="w-full sm:w-auto">
-          <motion.button 
-            whileTap={{ scale: 0.95 }}
-            className="group relative px-8 md:px-10 py-4 md:py-5 border border-white/20 text-white font-display font-black uppercase tracking-widest text-xs md:text-sm hover:border-white transition-all flex items-center justify-center gap-3 overflow-hidden w-full transition-transform"
+          <button 
+            className="group relative px-8 md:px-10 py-4 md:py-5 border border-white/20 text-white font-display font-black uppercase tracking-widest text-xs md:text-sm hover:border-white transition-all flex items-center justify-center gap-3 overflow-hidden w-full transition-transform active:scale-95"
             data-hover="true"
           >
             <div className="absolute bottom-0 left-0 w-full h-[2px] bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
             <span className="relative z-10">Fetch Resume</span>
             <Download size={16} className="relative z-10 group-hover:translate-y-1 transition-transform" />
-          </motion.button>
+          </button>
         </MagneticElement>
       </motion.div>
 

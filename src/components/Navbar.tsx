@@ -35,14 +35,13 @@ export const Navbar = () => {
           D.K
         </Link>
         
-        <motion.button 
-          whileTap={{ scale: 0.9 }}
+        <button 
           onClick={() => setIsOpen(!isOpen)}
-          className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-sm transition-transform group"
+          className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-sm transition-transform active:scale-95 group"
           data-hover="true"
         >
           {isOpen ? <X size={28} className="text-white" /> : <Menu size={28} className="text-white group-hover:rotate-90 transition-transform" />}
-        </motion.button>
+        </button>
       </nav>
 
       <AnimatePresence>
@@ -71,12 +70,9 @@ export const Navbar = () => {
                     className="group relative inline-block"
                     data-hover="true"
                   >
-                    <motion.span 
-                      whileTap={{ scale: 0.95, x: 10 }}
-                      className="font-display text-5xl md:text-8xl font-black uppercase tracking-tight transition-all duration-300 group-hover:italic group-hover:translate-x-8 group-hover:text-neon-orange block text-white"
-                    >
+                    <span className="font-display text-5xl md:text-8xl font-black uppercase tracking-tight transition-all duration-300 group-hover:italic group-hover:translate-x-8 group-hover:text-neon-orange block text-white">
                       {link.name}
-                    </motion.span>
+                    </span>
                   </Link>
                 </motion.div>
               ))}

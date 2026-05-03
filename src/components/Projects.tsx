@@ -16,7 +16,7 @@ export const Projects: React.FC = () => {
     });
   }, []);
 
-  const homeProjects = projects.slice(0, 3);
+  const homeProjects = projects.slice(0, 4);
 
   return (
     <Section id="projects" backgroundColor="bg-deep-black" textColor="text-white" className="py-32">

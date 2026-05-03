@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Plus, Pencil, Trash2, X, Save, Loader2, ExternalLink, Github } from 'lucide-react';
+import { Plus, Pencil, Trash2, X, Save, Loader2, ExternalLink, Github, ChevronUp, ChevronDown, GripVertical } from 'lucide-react';
 import { getProjects, createProject, updateProject, deleteProject } from '../../../services/dataService';
 import { Project } from '../../../data';
 
@@ -67,7 +67,11 @@ export const AdminProjects: React.FC = () => {
       const payload = { ...editing, tags, stats };
       const exists = projects.find((p) => p.id === editing.id);
       if (exists) await updateProject(editing.id, payload);
-      else await createProject(payload);
+      else {
+        // Assign orderIndex to new projects
+        const orderIndex = projects.length;
+        await createProject({ ...payload, orderIndex });
+      }
       load();
       setModalOpen(false);
     } catch (e: unknown) {
@@ -83,6 +87,30 @@ export const AdminProjects: React.FC = () => {
     try { await deleteProject(id); load(); }
     catch { setError('Failed to delete'); }
     finally { setDeleting(null); }
+  };
+  
+  const handleMove = async (index: number, direction: 'up' | 'down') => {
+    const newIndex = direction === 'up' ? index - 1 : index + 1;
+    if (newIndex < 0 || newIndex >= projects.length) return;
+
+    const newProjects = [...projects];
+    const temp = newProjects[index];
+    newProjects[index] = newProjects[newIndex];
+    newProjects[newIndex] = temp;
+
+    // Update state immediately for UX
+    setProjects(newProjects);
+
+    try {
+      // Update both projects in Supabase
+      await Promise.all([
+        updateProject(newProjects[index].id, { orderIndex: index }),
+        updateProject(newProjects[newIndex].id, { orderIndex: newIndex })
+      ]);
+    } catch (e) {
+      console.error('Failed to save new order:', e);
+      load(); // Revert on failure
+    }
   };
 
   return (
@@ -103,14 +131,32 @@ export const AdminProjects: React.FC = () => {
         </div>
       ) : (
         <div className="space-y-2">
-          {projects.map((p) => (
+          {projects.map((p, idx) => (
             <motion.div
               key={p.id}
+              layout
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center justify-between p-4 bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors group"
+              className="flex items-center justify-between p-4 bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors group relative"
             >
               <div className="flex items-center gap-4 min-w-0">
+                <div className="flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <button 
+                    onClick={() => handleMove(idx, 'up')} 
+                    disabled={idx === 0}
+                    className="p-1 hover:text-[#FF4D00] disabled:opacity-20 transition-colors"
+                  >
+                    <ChevronUp size={14} />
+                  </button>
+                  <button 
+                    onClick={() => handleMove(idx, 'down')} 
+                    disabled={idx === projects.length - 1}
+                    className="p-1 hover:text-[#FF4D00] disabled:opacity-20 transition-colors"
+                  >
+                    <ChevronDown size={14} />
+                  </button>
+                </div>
+                
                 {p.image && (
                   <div className="w-10 h-10 bg-white/5 border border-white/10 flex-shrink-0 overflow-hidden">
                     <img src={p.image} alt={p.title} className="w-full h-full object-cover opacity-60" />
@@ -120,6 +166,7 @@ export const AdminProjects: React.FC = () => {
                   <div className="flex items-center gap-3">
                     <p className="font-mono text-sm font-bold text-white truncate">{p.title}</p>
                     {p.isFeatured && <span className="px-2 py-0.5 bg-[#FF4D00]/20 text-[#FF4D00] font-mono text-[8px] uppercase tracking-widest flex-shrink-0">Featured</span>}
+                    <span className="font-mono text-[8px] text-white/10 uppercase">#{idx + 1}</span>
                   </div>
                   <div className="flex items-center gap-2 mt-0.5">
                     <span className="font-mono text-[10px] text-white/20">{p.date}</span>
