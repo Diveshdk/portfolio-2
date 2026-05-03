@@ -17,7 +17,16 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({ role, company, p
   return (
     <div className="relative flex flex-col md:flex-row items-center justify-center mb-24 last:mb-0 w-full group">
       {/* Central Node */}
-      <div className="absolute left-4 md:left-1/2 top-0 md:top-8 w-4 h-4 bg-white border-2 border-deep-black rounded-full z-20 -translate-x-1/2 transition-all duration-500 group-hover:bg-neon-orange group-hover:scale-150 group-hover:shadow-[0_0_15px_rgba(255,77,0,0.5)]" />
+      <motion.div 
+        className="absolute left-0 md:left-1/2 top-0 md:top-8 w-4 h-4 bg-white border-2 border-deep-black rounded-full z-20 -translate-x-1/2 transition-all duration-500 group-hover:bg-neon-orange group-hover:scale-150 group-hover:shadow-[0_0_15px_rgba(255,77,0,0.5)]"
+        whileInView={{ 
+          backgroundColor: ["#ffffff", "#FF4D00", "#FF4D00"],
+          scale: [1, 1.5, 1.2],
+          boxShadow: ["0 0 0px rgba(255,77,0,0)", "0 0 20px rgba(255,77,0,0.6)", "0 0 10px rgba(255,77,0,0.3)"]
+        }}
+        viewport={{ margin: "-45% 0px -45% 0px" }}
+        transition={{ duration: 0.5 }}
+      />
       
       {/* Content Container */}
       <div className={cn(
